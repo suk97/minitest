@@ -1,30 +1,24 @@
+let result = '';
 
-// result
-function inputNum(num) {
-    const result = document.getElementById('result-input');
-    result.value += num;
-};
+function add(num) {
+  result += num;
 
-function inputOperator(text) {
-    const oper = document.getElementById('result-input');
-    oper.value += text;
+  document.getElementById('result').value = result;
 }
 
-function calculate(n1, operator, n2) {
-    let result = 0;
-    return String(result);
+function compute() {
+  let result_num = parseInt(eval(result));
+  if (isInteger(result_num) == true) {
+    result = result_num;
   }
+  document.getElementById('result').value = result;
+}
 
-function calculate(n1, operator, n2) {
-    let result = 0;
-    if(operator === '+'){
-      result = Number(n1) + Number(n2);
-    } else if(operator === '-'){
-      result = Number(n1) - Number(n2);
-    } else if(operator === '*'){
-      result = Number(n1) * Number(n2);
-    } else if(operator === '/'){
-      result = Number(n1) / Number(n2)
-    }
-    return String(result);
+function clearDisplay() {
+  result = '';
+  document.getElementById('result').value = '0';
+}
+
+function isInteger(x) {
+  return Math.floor(x) === x;
 }

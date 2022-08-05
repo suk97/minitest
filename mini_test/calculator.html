@@ -6,35 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Calculator</title>
 	<link rel='stylesheet' href='/css/calculator.css'>
-	<script src='/js/calculator.js'></script>
+	<script defer src='/js/calculator.js'></script>
 </head>
 <body>
-    <div class="row" id="1">
-        <input class="result" disabled id="result-input">
+    <div class="row">
+      <input id="result" placeholder="0"/>
     </div>
-    <div class="row" id="2">
-        <div class="btn" onclick="inputNum(7)">7</div>
-        <div class="btn" onclick="inputNum(8)">8</div>
-        <div class="btn" onclick="inputNum(9)">9</div>
-        <div class="btn" onclick="inputOperator('/')">/</div>
+    <div class="row">
+      <div class="btn" onclick="add('7')">7</div>
+      <div class="btn" onclick="add('8')">8</div>
+      <div class="btn" onclick="add('9')">9</div>
+      <div class="btn op" onclick="add('/')">/</div>
     </div>
-    <div class="row" id="3">
-        <div class="btn" onclick="inputNum(4)">4</div>
-        <div class="btn" onclick="inputNum(5)">5</div>
-        <div class="btn" onclick="inputNum(6)">6</div>
-        <div class="btn" onclick="inputOperator('*')">*</div>
+    <div class="row">
+      <div class="btn" onclick="add('4')">4</div>
+      <div class="btn" onclick="add('5')">5</div>
+      <div class="btn" onclick="add('6')">6</div>
+      <div class="btn op" onclick="add('*')">*</div>
     </div>
-    <div class="row" id="4">
-        <div class="btn" onclick="inputNum(1)">1</div>
-        <div class="btn" onclick="inputNum(2)">2</div>
-        <div class="btn" onclick="inputNum(3)">3</div>
-        <div class="btn" onclick="inputOperator('-')">-</div>
+    <div class="row">
+      <div class="btn" onclick="add('1')">1</div>
+      <div class="btn" onclick="add('2')">2</div>
+      <div class="btn" onclick="add('3')">3</div>
+      <div class="btn op" onclick="add('-')">-</div>
     </div>
-    <div class="row" id="5">
-        <div class="btn" >C</div>
-        <div class="btn" onclick="inputNum(0)">0</div>
-        <div class="btn" >=</div>
-        <div class="btn" onclick="inputOperator('+')">+</div>
+    <div class="row">
+      <div class="btn" onclick="clearDisplay()">C</div>
+      <div class="btn" onclick="add('0')">0</div>
+      <div class="btn" onclick="compute()">=</div>
+      <div class="btn" onclick="add('+')">+</div>
     </div>
 </body>
 </html>

@@ -1,69 +1,53 @@
 @charset "utf-8";
 
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+
 .container {
-  width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  height: 200px;
-
+  height: 100vh;
+  display:flex;
 }
 
 
 /* 버튼 비활성화 일때 */
 ul {
   display: flex;
-  text-decoration: none;
-  padding: 10px;
 }
-ul .li {
-  padding: 1rem;
+ul li {
+  width: 100px;
+  font-weight: 900;
+  cursor: pointer;
   color: gray;
 }
 /* 버튼 활성 */
 ul li.on {
+  cursor: pointer;
   color: black;
 }
 section {
-  height: 200px;
   width: 300px;
-  margin: 40px;
+  height: 200px;
+  font-size: 50px;
   position: relative;
-
 }
 /* 박스 비활성 */
 section article {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  color: white;
-  font-size: 50px;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  border: 1px solid gray;
+  line-height: 200px;
+  text-align: center;
+  transition: .4s;
   opacity: 0;
-
 }
+section article:nth-child(1) {background-color: gold;}
+section article:nth-child(2) {background-color: tomato;}
+section article:nth-child(3) {background-color: green;}
 /* 박스 활성 */
-section article.on1 {
-  display: flex;
-  background : gold;
+section article.on {
   opacity: 1;
-
 }
 /* 박스 순서별로 배경색 지정 */
- section article.on2 {
-  display: flex;
-  background: tomato;
-  opacity: 0;
-
-}
-
-section article.on3 {
-  display: flex;
-  background: green;
-  opacity: 0;
-
-}
